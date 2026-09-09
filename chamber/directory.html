@@ -17,7 +17,9 @@
 <link rel="icon" href="../images/logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link id="font-stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="../styles/small.css">
 <link rel="stylesheet" href="../styles/larger.css">
 <link rel="stylesheet" href="styles/directory.css">
@@ -28,7 +30,7 @@
 <header class="site">
   <div class="wrap brandbar">
     <a class="brand" href="../index.html">
-      <img class="logo-mark" src="../images/logo.svg" alt="">
+      <img class="logo-mark" src="../images/logo.svg" alt="" width="34" height="34">
       <span class="site-name">Vanessa Awo</span>
     </a>
     <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">

@@ -20,7 +20,7 @@ function memberCard(member) {
   const card = document.createElement("article");
   card.className = "member-card";
   card.innerHTML = `
-    <img class="member-logo" src="images/${member.image}" alt="${member.name} logo">
+    <img class="member-logo" src="images/${member.image}" alt="${member.name} logo" width="48" height="48" loading="lazy">
     <h3>${member.name}</h3>
     <p>${member.tagline}</p>
     <p>${member.address}</p>
