@@ -1,0 +1,71 @@
+@media screen and (min-width: 700px){
+
+  .brandbar .site-name{ font-size: 1.7rem; }
+
+  .brandbar{ padding-bottom: 14px; }
+
+  .nav-toggle{ display: none; }
+
+  nav.tabs{
+    display:flex;
+    flex-direction: row;
+    gap: 6px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+  nav.tabs a{
+    padding: 10px 20px 9px;
+    border-radius: 6px 6px 0 0;
+    position: relative;
+    top: 1px;
+    border-bottom: none;
+  }
+  nav.tabs a.active{ border-color: var(--line); }
+
+  .page{ padding: 40px 0 10px; }
+  .page::before{ left: 24px; }
+  .page .wrap{ padding-left: 44px; }
+
+  h1.page-title{ font-size: 2.4rem; }
+
+  .section-head h2{ font-size: 1.5rem; }
+
+  .about-grid{
+    grid-template-columns: 1.5fr 1fr;
+    gap: 28px;
+    align-items: start;
+  }
+  .about-copy p{ max-width: 62ch; }
+  .photo-card{ max-width: none; }
+
+  .cert-toolbar{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+  }
+
+  .course-row{
+    grid-template-columns: 90px 1fr 90px 150px;
+    grid-template-areas: none;
+    row-gap: 0;
+  }
+  .course-code, .course-title, .course-credits, .course-status{
+    grid-area: auto;
+  }
+  .course-status{ justify-content:flex-start; }
+
+  .connect-row{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:flex-end;
+    gap: 24px;
+  }
+  .connect-row p{ max-width: 56ch; }
+
+  footer .wrap{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+}
