@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chamber Directory - Vanessa Awo</title>
-<meta name="description" content="Business directory for the Abuja Chamber of Commerce project, built by Vanessa Awo for WDD 231, with a toggle between grid and list views.">
+<title>Abuja Chamber of Commerce - Home</title>
+<meta name="description" content="Home page of the Abuja Chamber of Commerce: current weather, upcoming events, and a spotlight on member businesses. Built by Vanessa Awo for WDD 231.">
 <meta name="author" content="Vanessa Awo">
 
 <!-- Facebook / Open Graph meta -->
-<meta property="og:title" content="Abuja Chamber of Commerce Directory">
-<meta property="og:description" content="A member business directory built by Vanessa Awo for WDD 231, Web Frontend Development I.">
-<meta property="og:image" content="https://awovanessa.github.io/wdd231/chamber/images/logo-1.svg">
+<meta property="og:title" content="Abuja Chamber of Commerce">
+<meta property="og:description" content="Connecting and championing local businesses in Abuja, Nigeria.">
+<meta property="og:image" content="https://awovanessa.github.io/wdd231/chamber/images/hero.svg">
 <meta property="og:url" content="https://awovanessa.github.io/wdd231/chamber/index.html">
 <meta property="og:type" content="website">
 
@@ -22,15 +22,16 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="../styles/small.css">
 <link rel="stylesheet" href="../styles/larger.css">
-<link rel="stylesheet" href="styles/directory.css">
-<script type="module" src="scripts/main.js"></script>
+<link rel="stylesheet" href="styles/chamber.css">
+<link rel="stylesheet" href="styles/index.css">
+<script type="module" src="scripts/home.js"></script>
 </head>
 <body>
 
 <header class="site">
   <div class="wrap brandbar">
     <a class="brand" href="../index.html">
-      <img class="logo-mark" src="../images/logo.svg" alt="">
+      <img class="logo-mark" src="../images/logo.svg" alt="" width="34" height="34">
       <span class="site-name">Vanessa Awo</span>
     </a>
     <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
@@ -48,30 +49,72 @@
   <div class="page">
     <div class="wrap">
 
-      <h1 class="page-title">Abuja Chamber Directory</h1>
+      <h1 class="page-title">Abuja Chamber of Commerce</h1>
 
-      <section aria-labelledby="directory-heading">
+      <nav class="chamber-subnav" aria-label="Chamber section">
+        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="directory.html">Directory</a>
+      </nav>
+
+      <section class="hero" aria-labelledby="hero-heading">
+        <img src="images/hero.svg" alt="Illustration of the Abuja skyline at sunrise, with Aso Rock in the distance">
+        <div class="hero-copy">
+          <h2 id="hero-heading">Where Abuja's businesses grow together</h2>
+          <a class="hero-cta" href="join.html">Join the chamber</a>
+        </div>
+      </section>
+
+      <div class="two-col">
+        <section aria-labelledby="events-heading">
+          <div class="section-head">
+            <span class="checkbox done" aria-hidden="true"></span>
+            <h2 id="events-heading">Current Events</h2>
+          </div>
+
+          <div class="event-row">
+            <div class="event-date"><span class="day">24</span><span class="mon">Sep</span></div>
+            <div>
+              <p class="event-title">Small Business Roundtable</p>
+              <p class="event-desc">A morning session on financing and growth, hosted with member banks and cooperatives.</p>
+            </div>
+          </div>
+          <div class="event-row">
+            <div class="event-date"><span class="day">02</span><span class="mon">Oct</span></div>
+            <div>
+              <p class="event-title">Chamber Networking Mixer</p>
+              <p class="event-desc">Meet fellow members over refreshments at the Chamber office in Wuse Zone 5.</p>
+            </div>
+          </div>
+          <div class="event-row">
+            <div class="event-date"><span class="day">14</span><span class="mon">Oct</span></div>
+            <div>
+              <p class="event-title">Digital Marketing Workshop</p>
+              <p class="event-desc">A hands-on workshop for member businesses looking to grow their online presence.</p>
+            </div>
+          </div>
+        </section>
+
+        <section aria-labelledby="weather-heading">
+          <div class="section-head">
+            <span class="checkbox done" aria-hidden="true"></span>
+            <h2 id="weather-heading">Abuja Weather</h2>
+          </div>
+
+          <div class="weather-now">
+            <span class="weather-temp" id="current-temp">--°C</span>
+            <span class="weather-desc" id="current-desc">Loading forecast&hellip;</span>
+          </div>
+          <div class="weather-forecast" id="weather-forecast"></div>
+          <p class="weather-note" id="weather-note"></p>
+        </section>
+      </div>
+
+      <section aria-labelledby="spotlight-heading">
         <div class="section-head">
           <span class="checkbox done" aria-hidden="true"></span>
-          <h2 id="directory-heading">Member Businesses</h2>
+          <h2 id="spotlight-heading">Member Spotlight</h2>
         </div>
-
-        <div class="dir-toolbar">
-          <div class="view-toggle" role="group" aria-label="Choose view">
-            <button type="button" id="view-grid" class="active" aria-pressed="true">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
-              Grid
-            </button>
-            <button type="button" id="view-list" aria-pressed="false">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="3"/><rect x="3" y="10.5" width="18" height="3"/><rect x="3" y="17" width="18" height="3"/></svg>
-              List
-            </button>
-          </div>
-          <p class="member-count"><strong id="member-count-value">0</strong> member businesses</p>
-        </div>
-
-        <!-- rows are rendered by scripts/directory.js -->
-        <div class="is-grid" id="member-container"></div>
+        <div class="spotlight-grid" id="spotlight-grid"></div>
       </section>
 
     </div>

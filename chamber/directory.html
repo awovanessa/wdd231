@@ -22,6 +22,7 @@
 <noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="../styles/small.css">
 <link rel="stylesheet" href="../styles/larger.css">
+<link rel="stylesheet" href="styles/chamber.css">
 <link rel="stylesheet" href="styles/directory.css">
 <script type="module" src="scripts/main.js"></script>
 </head>
@@ -39,7 +40,7 @@
   </div>
   <nav id="primary-nav" class="tabs">
     <a href="../index.html">Home</a>
-    <a href="directory.html" class="active">Chamber</a>
+    <a href="index.html" class="active" aria-current="page">Chamber</a>
     <a href="../final/index.html">Final</a>
   </nav>
 </header>
@@ -49,6 +50,11 @@
     <div class="wrap">
 
       <h1 class="page-title">Abuja Chamber Directory</h1>
+
+      <nav class="chamber-subnav" aria-label="Chamber section">
+        <a href="index.html">Home</a>
+        <a href="directory.html" class="active" aria-current="page">Directory</a>
+      </nav>
 
       <section aria-labelledby="directory-heading">
         <div class="section-head">

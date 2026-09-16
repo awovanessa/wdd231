@@ -1,0 +1,164 @@
+/* ==================================================
+   HERO + CTA
+   ================================================== */
+.hero{
+  position: relative;
+  margin: 0 0 40px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--ink);
+}
+.hero img{
+  display:block;
+  width: 100%;
+  height: auto;
+}
+.hero-copy{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 18px 18px 20px;
+  background: linear-gradient(to top, rgba(20,17,10,0.82) 0%, rgba(20,17,10,0.35) 65%, rgba(20,17,10,0) 100%);
+}
+.hero-copy h2{
+  color: var(--paper);
+  font-size: 1.6rem;
+  margin: 0 0 12px;
+  max-width: 22ch;
+}
+.hero-cta{
+  display: inline-block;
+  text-decoration: none;
+  background: var(--rust);
+  color: var(--paper);
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 11px 22px;
+  border-radius: var(--radius);
+  border: 1px solid #6c3019;
+}
+.hero-cta:hover{ background: #75381f; }
+
+/* ==================================================
+   CURRENT EVENTS
+   ================================================== */
+.event-row{
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 14px;
+  padding: 14px 4px;
+  border-bottom: 1px dashed var(--line);
+  align-items: start;
+}
+.event-row:last-child{ border-bottom: none; }
+.event-date{
+  font-family: 'Fraunces', serif;
+  text-align: center;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 6px 0;
+  line-height: 1.1;
+}
+.event-date .day{ display:block; font-size: 1.3rem; font-weight: 700; color: var(--ink); }
+.event-date .mon{ display:block; font-size: 0.7rem; color: var(--ink-soft); }
+.event-title{ font-weight: 700; margin: 0 0 4px; font-size: 0.98rem; }
+.event-desc{ margin: 0; color: var(--ink-soft); font-size: 0.9rem; }
+
+/* ==================================================
+   WEATHER
+   ================================================== */
+.weather-now{
+  display:flex;
+  align-items:baseline;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+.weather-temp{
+  font-family: 'Fraunces', serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.weather-desc{
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+  text-transform: capitalize;
+}
+.weather-forecast{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.forecast-day{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 12px 6px;
+  text-align:center;
+}
+.forecast-day .f-label{ font-weight: 700; font-size: 0.85rem; margin-bottom: 4px; }
+.forecast-day .f-temp{ font-family:'Fraunces', serif; font-size: 1.15rem; }
+.weather-note{
+  margin-top: 12px;
+  font-size: 0.82rem;
+  color: var(--ink-soft);
+}
+
+/* ==================================================
+   SPOTLIGHT
+   ================================================== */
+.spotlight-grid{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.spotlight-card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  display:flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.spotlight-card .spotlight-top{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+.spotlight-logo{ width: 42px; height: 42px; border-radius: 6px; flex: none; }
+.spotlight-card h3{ font-size: 1rem; font-weight: 600; }
+.spotlight-level{
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 2px 9px;
+  border-radius: 10px;
+  margin-left: auto;
+}
+.spotlight-level.gold{ background: var(--mustard); color: var(--ink); }
+.spotlight-level.silver{ background: var(--line); color: var(--ink); }
+.spotlight-card p{ margin: 0; color: var(--ink-soft); font-size: 0.88rem; }
+.spotlight-card a{ color: var(--rust); font-weight: 600; text-decoration:none; font-size: 0.88rem; }
+.spotlight-card a:hover{ text-decoration: underline; }
+
+/* ==================================================
+   DESKTOP LAYOUT CHANGE
+   ================================================== */
+@media screen and (min-width: 700px){
+  .hero-copy{ padding: 30px 34px 32px; }
+  .hero-copy h2{ font-size: 2.2rem; }
+
+  .two-col{
+    display:grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  .spotlight-grid{ grid-template-columns: repeat(3, 1fr); }
+  .weather-forecast{ gap: 14px; }
+}
