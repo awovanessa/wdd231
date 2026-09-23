@@ -1,0 +1,174 @@
+/* ==================================================
+   JOIN PAGE LAYOUT
+   ================================================== */
+.join-layout{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+/* ---- form ---- */
+.join-form{
+  display:flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.join-form label{
+  display:flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+.join-form input,
+.join-form select,
+.join-form textarea{
+  font-family: 'Public Sans', sans-serif;
+  font-size: 0.95rem;
+  padding: 10px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--card);
+  color: var(--ink);
+}
+.join-form input:focus,
+.join-form select:focus,
+.join-form textarea:focus{
+  outline: 2px solid var(--rust);
+  outline-offset: 1px;
+}
+.join-form textarea{ resize: vertical; min-height: 90px; }
+
+.join-submit{
+  align-self: flex-start;
+  background: var(--rust);
+  color: var(--paper);
+  border: 1px solid #6c3019;
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 11px 26px;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.join-submit:hover{ background: #75381f; }
+
+/* ---- membership cards ---- */
+.membership-cards{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+.membership-card{
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 16px;
+  opacity: 0;
+  animation: cardIn 0.6s ease forwards;
+}
+.membership-card:nth-child(2){ animation-delay: 0.12s; }
+.membership-card:nth-child(3){ animation-delay: 0.24s; }
+.membership-card:nth-child(4){ animation-delay: 0.36s; }
+.membership-card:nth-child(5){ animation-delay: 0.48s; }
+
+@keyframes cardIn{
+  from{ opacity: 0; transform: translateY(16px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+
+.membership-card h3{
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.membership-card p{
+  margin: 0 0 12px;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+.membership-link{
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--rust);
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.membership-link:hover{ color: #75381f; }
+
+/* ---- benefit modals ---- */
+dialog.benefits-modal{
+  position: relative;
+  width: min(420px, 90vw);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  background: var(--paper);
+  color: var(--ink);
+}
+dialog.benefits-modal::backdrop{
+  background: rgb(20 17 10 / 55%);
+}
+dialog.benefits-modal h3{
+  margin: 0 0 14px;
+  font-size: 1.1rem;
+  padding-right: 20px;
+}
+dialog.benefits-modal ul{
+  margin: 0;
+  padding-left: 20px;
+  display:flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--ink-soft);
+  font-size: 0.92rem;
+}
+.modal-close{
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  line-height: 1;
+  cursor: pointer;
+  color: var(--ink-soft);
+}
+.modal-close:hover{ color: var(--ink); }
+
+/* ---- thank you page ---- */
+.confirm-list{
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 4px 16px;
+  margin: 20px 0 28px;
+}
+.confirm-list dt{
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-top: 10px;
+}
+.confirm-list dd{
+  margin: 0;
+  font-size: 1rem;
+  color: var(--ink);
+}
+
+@media screen and (min-width: 700px){
+  .join-layout{
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 32px;
+    align-items: start;
+  }
+  .confirm-list{
+    grid-template-columns: 200px 1fr;
+    align-items: baseline;
+  }
+  .confirm-list dt{ margin-top: 0; }
+}

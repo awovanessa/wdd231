@@ -1,0 +1,65 @@
+[
+  {
+    "name": "Mai Shayi Coffee Roasters",
+    "address": "84 Kwame Nkrumah Street, Asokoro, Abuja, Nigeria",
+    "phone": "+234 904 776 4552",
+    "url": "https://maishayicoffee.com/",
+    "image": "logo-1.svg",
+    "membership": 3,
+    "tagline": "The Home of Nigerian Specialty Coffee"
+  },
+  {
+    "name": "The Equity Temple",
+    "address": "House B24, Taslee City Palm Estate, Plot 475, Uruguay Street, Off Aguiyi Ironsi Crescent, Maitama, Abuja, Nigeria",
+    "phone": "+234 802 838 3751",
+    "url": "https://www.theequitytemple.com/",
+    "image": "logo-2.svg",
+    "membership": 2,
+    "tagline": "A full-service law firm specializing in corporate commercial transactions and dispute resolution"
+  },
+  {
+    "name": "Wadata Fresh Store",
+    "address": "No. 5 Gano Close, Yoruba Mosque, Medical Centre Gate, Abuja FCT, Nigeria",
+    "phone": "08032892443",
+    "url": "https://www.wadatavegetables.com.ng/",
+    "image": "logo-3.svg",
+    "membership": 1,
+    "tagline": "Fresh vegetables, fruits and agro-allied products delivered across Abuja"
+  },
+  {
+    "name": "FocusHub",
+    "address": "12 Ebitu Ukiwe Street, Jabi, Abuja, Nigeria",
+    "phone": "+234 816 523 5161",
+    "url": "https://focushub.africa/",
+    "image": "logo-4.svg",
+    "membership": 3,
+    "tagline": "A business and technology innovation hub helping startups turn ideas into sustainable solutions"
+  },
+  {
+    "name": "FitHive Studio",
+    "address": "Unique Garden, 9 Accra Street, Wuse Zone 5, Abuja, FCT, Nigeria",
+    "phone": "070 313 55292",
+    "url": "https://fithivestudio.com/",
+    "image": "logo-5.svg",
+    "membership": 1,
+    "tagline": "A community-focused fitness studio"
+  },
+  {
+    "name": "Doorstep Media Limited",
+    "address": "Suite 27, Canal House, Plot 1138 Abogo Largema Street, CBD, Abuja, Nigeria",
+    "phone": "+234 809 678 8882",
+    "url": "https://www.doorstepmedia.com/",
+    "image": "logo-6.svg",
+    "membership": 2,
+    "tagline": "Experts in branding and printing since 2008"
+  },
+  {
+    "name": "R&B Kitchen Ltd.",
+    "address": "No. 23 F.O. Williams Street, Life Camp, Abuja, FCT, Nigeria",
+    "phone": "0706 069 8999",
+    "url": "https://rabibokanekitchen.com.ng/",
+    "image": "logo-7.svg",
+    "membership": 3,
+    "tagline": "Exquisite catering for every occasion"
+  }
+]

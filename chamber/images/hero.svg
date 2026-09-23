@@ -1,0 +1,59 @@
+<svg viewBox="0 0 1200 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="heroTitle">
+  <title id="heroTitle">Stylized illustration of the Abuja skyline at sunrise, with Aso Rock in the distance</title>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EFE7D8"/>
+      <stop offset="55%" stop-color="#E9DBC0"/>
+      <stop offset="100%" stop-color="#DEC79A"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#D9A24B"/>
+      <stop offset="100%" stop-color="#C08A2E"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="620" fill="url(#sky)"/>
+
+  <!-- sun -->
+  <circle cx="960" cy="200" r="90" fill="url(#sun)" opacity="0.9"/>
+
+  <!-- Aso Rock, simplified silhouette, far distance -->
+  <path d="M120 430 C 200 340, 250 320, 300 360 C 340 300, 400 300, 430 360 C 470 330, 520 340, 540 400 L 540 430 Z" fill="#B79E76" opacity="0.55"/>
+
+  <!-- mid-ground hills -->
+  <path d="M0 460 C 150 410, 320 440, 480 415 C 650 390, 820 430, 1000 405 C 1080 395, 1150 405, 1200 415 L 1200 620 L 0 620 Z" fill="#C7B99C" opacity="0.65"/>
+
+  <!-- city skyline silhouette -->
+  <g fill="#2B2418">
+    <rect x="60"  y="360" width="34" height="130"/>
+    <rect x="104" y="330" width="26" height="160"/>
+    <rect x="140" y="380" width="40" height="110"/>
+    <polygon points="200,490 200,300 230,270 260,300 260,490"/>
+    <rect x="285" y="350" width="30" height="140"/>
+    <rect x="325" y="395" width="55" height="95"/>
+    <rect x="392" y="340" width="24" height="150"/>
+    <rect x="430" y="410" width="60" height="80"/>
+    <rect x="505" y="365" width="34" height="125"/>
+
+    <!-- central twin-tower motif (referencing Abuja's National Ecumenical Centre / Nigerian Law School style silhouettes, stylized) -->
+    <rect x="565" y="300" width="30" height="190"/>
+    <rect x="600" y="280" width="30" height="210"/>
+    <rect x="635" y="300" width="30" height="190"/>
+
+    <rect x="690" y="400" width="46" height="90"/>
+    <rect x="746" y="355" width="28" height="135"/>
+    <rect x="784" y="385" width="50" height="105"/>
+    <polygon points="850,490 850,320 878,295 906,320 906,490"/>
+    <rect x="930" y="410" width="34" height="80"/>
+    <rect x="975" y="370" width="26" height="120"/>
+    <rect x="1012" y="400" width="48" height="90"/>
+    <rect x="1070" y="345" width="24" height="145"/>
+    <rect x="1104" y="390" width="40" height="100"/>
+  </g>
+
+  <!-- ground -->
+  <rect x="0" y="488" width="1200" height="132" fill="#2B2418"/>
+
+  <!-- foreground road / market strip suggestion -->
+  <rect x="0" y="560" width="1200" height="6" fill="#8C4227" opacity="0.5"/>
+</svg>

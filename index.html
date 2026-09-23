@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vanessa Awo - Certificate Tracker</title>
+<meta name="description" content="Vanessa Awo's home page tracking progress through the Web and Computer Programming certificate, including completed courses and credit totals.">
+<meta name="author" content="Vanessa Awo">
+<link rel="icon" href="images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/small.css">
+<link rel="stylesheet" href="styles/larger.css">
+<script type="module" src="scripts/main.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap brandbar">
+    <a class="brand" href="index.html">
+      <img class="logo-mark" src="images/logo.svg" alt="">
+      <span class="site-name">Vanessa Awo</span>
+    </a>
+    <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav id="primary-nav" class="tabs">
+    <a href="index.html" class="active" aria-current="page">Home</a>
+    <a href="chamber/index.html">Chamber</a>
+    <a href="final/index.html">Final</a>
+  </nav>
+</header>
+
+<main>
+  <div class="page">
+    <div class="wrap">
+
+      <h1 class="page-title">Home</h1>
+
+      <section aria-labelledby="about-heading">
+        <div class="section-head">
+          <span class="checkbox done" aria-hidden="true"></span>
+          <h2 id="about-heading">About me</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>I'm Vanessa Awo, a software engineer from Abuja, Nigeria, currently completing the Software Development degree through BYU&#8209;Pathway while also pursuing a Computer Science degree at a physical university. This page tracks my progress through the Web and Computer Programming certificate as I build toward a full portfolio of frontend projects.</p>
+          </div>
+          <div class="photo-card">
+            <img src="images/student-photo.jpg" alt="Portrait of Vanessa Awo">
+            <p class="photo-caption">Vanessa Awo</p>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="cert-heading">
+        <div class="section-head">
+          <span class="checkbox done" aria-hidden="true"></span>
+          <h2 id="cert-heading">Web and Computer Programming Certificate</h2>
+        </div>
+
+        <div class="cert-toolbar">
+          <div class="filters" role="group" aria-label="Filter courses">
+            <button type="button" class="active" data-filter="all">All Courses</button>
+            <button type="button" data-filter="wdd">WDD Courses</button>
+            <button type="button" data-filter="cse">CSE Courses</button>
+          </div>
+          <p class="credit-total">Total credits: <strong id="credit-total-value">12</strong></p>
+        </div>
+
+        <!-- rows are rendered by scripts/courses.js -->
+        <div class="course-table" id="course-table"></div>
+      </section>
+
+      <section aria-labelledby="connect-heading">
+        <div class="section-head">
+          <span class="checkbox" aria-hidden="true"></span>
+          <h2 id="connect-heading">Connect</h2>
+        </div>
+        <div class="connect-row">
+          <p>I'm always open to connecting with fellow developers and business owners looking to grow their online presence. Reach out through GitHub or LinkedIn below, or check back weekly as this page grows alongside the Chamber of Commerce and Final course projects.</p>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap footer-social">
+    <div class="social-links">
+      <a href="https://github.com/awovanessa/wdd231" aria-label="GitHub">
+        <svg viewBox="0 0 24 24"><path d="M12 2.2c-5.52 0-10 4.48-10 10 0 4.42 2.87 8.17 6.84 9.5.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.9-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .26.18.58.69.48A10.01 10.01 0 0 0 22 12.2c0-5.52-4.48-10-10-10z"/></svg>
+      </a>
+      <a href="https://ng.linkedin.com/in/vanessa-awo-457442348" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+      </a>
+      <a href="https://x.com/aviwebstudios" aria-label="X (formerly Twitter)">
+        <svg viewBox="0 0 24 24"><path d="M18.24 3H21l-6.5 7.43L22.1 21h-6.2l-4.86-6.35L5.4 21H2.6l6.95-7.94L2.1 3h6.35l4.39 5.8L18.24 3zm-1.08 16.2h1.72L7.9 4.7H6.05l11.11 14.5z"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="wrap footer-meta">
+    <p>&copy; <span id="year">2026</span> Vanessa Awo, Nigeria</p>
+    <p id="lastModified">Last Modification:</p>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abuja Chamber of Commerce - Home</title>
+<meta name="description" content="Home page of the Abuja Chamber of Commerce: current weather, upcoming events, and a spotlight on member businesses. Built by Vanessa Awo for WDD 231.">
+<meta name="author" content="Vanessa Awo">
+
+<!-- Facebook / Open Graph meta -->
+<meta property="og:title" content="Abuja Chamber of Commerce">
+<meta property="og:description" content="Connecting and championing local businesses in Abuja, Nigeria.">
+<meta property="og:image" content="https://awovanessa.github.io/wdd231/chamber/images/hero.svg">
+<meta property="og:url" content="https://awovanessa.github.io/wdd231/chamber/index.html">
+<meta property="og:type" content="website">
+
+<link rel="icon" href="../images/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&display=swap">
+<link id="font-stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" media="print">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="../styles/small.css">
+<link rel="stylesheet" href="../styles/larger.css">
+<link rel="stylesheet" href="styles/chamber.css">
+<link rel="stylesheet" href="styles/index.css">
+<script type="module" src="scripts/home.js"></script>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap brandbar">
+    <a class="brand" href="../index.html">
+      <img class="logo-mark" src="../images/logo.svg" alt="" width="34" height="34">
+      <span class="site-name">Vanessa Awo</span>
+    </a>
+    <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <nav id="primary-nav" class="tabs">
+    <a href="../index.html">Home</a>
+    <a href="index.html" class="active" aria-current="page">Chamber</a>
+    <a href="../final/index.html">Final</a>
+  </nav>
+</header>
+
+<main>
+  <div class="page">
+    <div class="wrap">
+
+      <h1 class="page-title">Abuja Chamber of Commerce</h1>
+
+      <nav class="chamber-subnav" aria-label="Chamber section">
+        <a href="index.html" class="active" aria-current="page">Home</a>
+        <a href="directory.html">Directory</a>
+        <a href="join.html">Join</a>
+      </nav>
+
+      <section class="hero" aria-labelledby="hero-heading">
+        <img src="images/hero.svg" alt="Illustration of the Abuja skyline at sunrise, with Aso Rock in the distance">
+        <div class="hero-copy">
+          <h2 id="hero-heading">Where Abuja's businesses grow together</h2>
+          <a class="hero-cta" href="join.html">Join the chamber</a>
+        </div>
+      </section>
+
+      <div class="two-col">
+        <section aria-labelledby="events-heading">
+          <div class="section-head">
+            <span class="checkbox done" aria-hidden="true"></span>
+            <h2 id="events-heading">Current Events</h2>
+          </div>
+
+          <div class="event-row">
+            <div class="event-date"><span class="day">24</span><span class="mon">Sep</span></div>
+            <div>
+              <p class="event-title">Small Business Roundtable</p>
+              <p class="event-desc">A morning session on financing and growth, hosted with member banks and cooperatives.</p>
+            </div>
+          </div>
+          <div class="event-row">
+            <div class="event-date"><span class="day">02</span><span class="mon">Oct</span></div>
+            <div>
+              <p class="event-title">Chamber Networking Mixer</p>
+              <p class="event-desc">Meet fellow members over refreshments at the Chamber office in Wuse Zone 5.</p>
+            </div>
+          </div>
+          <div class="event-row">
+            <div class="event-date"><span class="day">14</span><span class="mon">Oct</span></div>
+            <div>
+              <p class="event-title">Digital Marketing Workshop</p>
+              <p class="event-desc">A hands-on workshop for member businesses looking to grow their online presence.</p>
+            </div>
+          </div>
+        </section>
+
+        <section aria-labelledby="weather-heading">
+          <div class="section-head">
+            <span class="checkbox done" aria-hidden="true"></span>
+            <h2 id="weather-heading">Abuja Weather</h2>
+          </div>
+
+          <div class="weather-now">
+            <span class="weather-temp" id="current-temp">--°C</span>
+            <span class="weather-desc" id="current-desc">Loading forecast&hellip;</span>
+          </div>
+          <div class="weather-forecast" id="weather-forecast"></div>
+          <p class="weather-note" id="weather-note"></p>
+        </section>
+      </div>
+
+      <section aria-labelledby="spotlight-heading">
+        <div class="section-head">
+          <span class="checkbox done" aria-hidden="true"></span>
+          <h2 id="spotlight-heading">Member Spotlight</h2>
+        </div>
+        <div class="spotlight-grid" id="spotlight-grid"></div>
+      </section>
+
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap footer-social">
+    <div class="social-links">
+      <a href="https://github.com/awovanessa/wdd231" aria-label="GitHub">
+        <svg viewBox="0 0 24 24"><path d="M12 2.2c-5.52 0-10 4.48-10 10 0 4.42 2.87 8.17 6.84 9.5.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.9-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .26.18.58.69.48A10.01 10.01 0 0 0 22 12.2c0-5.52-4.48-10-10-10z"/></svg>
+      </a>
+      <a href="https://ng.linkedin.com/in/vanessa-awo-457442348" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+      </a>
+      <a href="https://x.com/aviwebstudios" aria-label="X (formerly Twitter)">
+        <svg viewBox="0 0 24 24"><path d="M18.24 3H21l-6.5 7.43L22.1 21h-6.2l-4.86-6.35L5.4 21H2.6l6.95-7.94L2.1 3h6.35l4.39 5.8L18.24 3zm-1.08 16.2h1.72L7.9 4.7H6.05l11.11 14.5z"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="wrap footer-meta">
+    <p>Vanessa Awo &middot; WDD 231</p>
+    <p>&copy; <span id="year">2026</span> Vanessa Awo, Nigeria</p>
+    <p id="lastModified">Last Modification:</p>
+  </div>
+</footer>
+</body>
+</html>
