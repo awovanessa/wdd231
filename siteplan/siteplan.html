@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PortFolio Hub - Site Plan</title>
+  <meta name="description" content="Site plan for PortFolio Hub, a student developer portfolio: name, purpose, scenarios, color scheme, typography and wireframes.">
+  <meta name="author" content="Awo Iwinosa Vanessa">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&amp;family=Inter:wght@400;600&amp;family=Poppins:wght@600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+<body>
+  <header>
+    <h1>PortFolio Hub: Site Plan</h1>
+    <p>A blueprint for my individual website project: a portfolio that shows what I build and how to reach me.</p>
+  </header>
+
+  <main>
+    <section id="site-name">
+      <h2>Site Name</h2>
+      <p><strong>PortFolio Hub</strong></p>
+      <p>The name signals a central place for my portfolio projects as a student developer.</p>
+    </section>
+
+    <section id="site-purpose">
+      <h2>Site Purpose</h2>
+      <p>To showcase my web-development projects and skills so visitors can quickly see what I build, how I build it, and how to contact me for collaborations or internships.</p>
+    </section>
+
+    <section id="scenarios">
+      <h2>Scenarios</h2>
+      <p>Questions a visitor from the target audience (recruiters, hiring managers, and potential collaborators) will ask:</p>
+      <ol>
+        <li>What projects has this person built, and what technologies did they use?</li>
+        <li>How can I contact them for a project or internship opportunity?</li>
+      </ol>
+    </section>
+
+    <section id="color-scheme">
+      <h2>Color Scheme</h2>
+      <div class="table-wrap">
+        <table>
+          <caption>Two theme colors and where each is used</caption>
+          <thead>
+            <tr>
+              <th scope="col">Color</th>
+              <th scope="col">Hex</th>
+              <th scope="col">Where it is used</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><span class="swatch swatch-navy"></span>Navy</th>
+              <td><code>#0B3D6C</code></td>
+              <td>Header background, primary buttons, section headings, and link hover.</td>
+            </tr>
+            <tr>
+              <th scope="row"><span class="swatch swatch-teal"></span>Teal</th>
+              <td><code>#1ABC9C</code></td>
+              <td>Accent highlights (technology tags), button hover state, and small decorative borders and underlines.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Text is black on white backgrounds, and white on navy. Navy text is used on teal, which keeps the contrast readable.</p>
+      <p>
+        <span class="btn-sample">Primary button (navy)</span>
+        <span class="tag">HTML5</span>
+        <span class="tag">CSS3</span>
+        <span class="tag">JavaScript</span>
+      </p>
+    </section>
+
+    <section id="typography">
+      <h2>Typography</h2>
+      <h3>Poppins: headings</h3>
+      <p class="font-poppins">Used for all H1, H2 and H3 headings. The headings on this page use it.</p>
+      <h3>Inter: body text</h3>
+      <p class="font-inter">Used for paragraphs, lists and general content. This paragraph is set in Inter.</p>
+      <h3>Fira Code: code and technology tags</h3>
+      <p class="font-fira">Used for code snippets and technology tags such as <span class="tag">HTML5</span> <span class="tag">CSS3</span> <span class="tag">React</span>.</p>
+    </section>
+
+    <section id="wireframe">
+      <h2>Wireframe</h2>
+      <p>Home page layouts in black and white. On small screens the projects grid is one column; on wider screens it becomes three columns.</p>
+      <div class="wireframes">
+        <figure>
+          <div class="wf wf-mobile" role="img" aria-label="Mobile home page wireframe: header with menu button, hero, one-column projects grid, contact section, footer">
+            <div class="wf-box wf-header"><span>LOGO</span><span>[&#9776;]</span></div>
+            <div class="wf-box wf-hero">HERO<br>Name + tagline<br>[ View projects ]</div>
+            <div class="wf-box">PROJECTS</div>
+            <div class="wf-grid">
+              <div class="wf-card">Project card 1</div>
+              <div class="wf-card">Project card 2</div>
+              <div class="wf-card">Project card 3</div>
+            </div>
+            <div class="wf-box">CONTACT<br>[ Get in touch ]</div>
+            <div class="wf-box wf-footer">FOOTER</div>
+          </div>
+          <figcaption>Mobile (320px)</figcaption>
+        </figure>
+
+        <figure class="wf-desktop-figure">
+          <div class="wf wf-desktop" role="img" aria-label="Desktop home page wireframe: header with horizontal navigation, hero, three-column projects grid, contact section, footer">
+            <div class="wf-box wf-header">
+              <span>LOGO</span>
+              <span class="wf-nav"><span>Home</span><span>Projects</span><span>Contact</span></span>
+            </div>
+            <div class="wf-box wf-hero">HERO<br>Name + tagline<br>[ View projects ]</div>
+            <div class="wf-box">PROJECTS</div>
+            <div class="wf-grid">
+              <div class="wf-card">Project card 1</div>
+              <div class="wf-card">Project card 2</div>
+              <div class="wf-card">Project card 3</div>
+            </div>
+            <div class="wf-box">CONTACT<br>[ Get in touch ]</div>
+            <div class="wf-box wf-footer">FOOTER</div>
+          </div>
+          <figcaption>Desktop / tablet (1024px)</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Awo Iwinosa Vanessa | WDD 231 Site Plan</p>
+  </footer>
+</body>
+</html>
