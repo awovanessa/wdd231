@@ -18,19 +18,20 @@
 
 /* ==================================================
    DISCOVER GRID
-   small (320px - 640px): one column, cards in order
+   small (320px - 640px): one column, cards placed
+   in their own order (each pair after card1 swapped)
    ================================================== */
 .discover-grid{
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-template-areas:
     "card1"
-    "card2"
     "card3"
-    "card4"
+    "card2"
     "card5"
-    "card6"
+    "card4"
     "card7"
+    "card6"
     "card8";
   gap: 20px;
   margin-bottom: 44px;
@@ -114,7 +115,7 @@
 
 /* ==================================================
    MEDIUM (641px - 1024px): two columns,
-   full-width feature cards first and last
+   full-width feature cards 1 and 4
    ================================================== */
 @media screen and (min-width: 641px){
   .discover-grid{
@@ -122,15 +123,15 @@
     grid-template-areas:
       "card1 card1"
       "card2 card3"
-      "card4 card5"
-      "card6 card7"
-      "card8 card8";
+      "card4 card4"
+      "card5 card6"
+      "card7 card8";
     gap: 24px;
   }
 
   /* wide cards: image on the left, text on the right */
   .card1,
-  .card8{
+  .card4{
     grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
     grid-template-rows: auto auto 1fr auto;
     grid-template-areas:
@@ -141,7 +142,7 @@
     column-gap: 20px;
   }
   .card1 figure,
-  .card8 figure{ align-self: start; }
+  .card4 figure{ align-self: start; }
 
   /* image hover effect: medium and large views only */
   .place-card img{ transition: transform 0.3s ease, filter 0.3s ease; }
@@ -153,26 +154,47 @@
 
 /* ==================================================
    LARGE (1025px and up): three columns,
-   wide feature card top-left
+   wide cards 1, 6 and 8, tall card 2
    ================================================== */
 @media screen and (min-width: 1025px){
   .discover-grid{
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-areas:
       "card1 card1 card2"
-      "card3 card4 card5"
-      "card6 card7 card8";
+      "card3 card4 card2"
+      "card5 card6 card6"
+      "card7 card8 card8";
   }
 
-  /* card1 shares its row with the taller stacked card2:
-     center its content instead of leaving a gap above the button */
-  .card1{
+  /* wide cards: image on the left, text on the right */
+  .card6,
+  .card8{
+    grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+    grid-template-areas:
+      "figure title"
+      "figure address"
+      "figure desc"
+      "figure button";
+    column-gap: 20px;
+  }
+  .card6 figure,
+  .card8 figure{ align-self: start; }
+
+  /* wide cards can share a row with a taller stacked card:
+     center their content instead of leaving a gap above the button */
+  .card1,
+  .card6,
+  .card8{
     grid-template-rows: auto auto auto auto;
     align-content: center;
   }
 
-  /* card8 returns to the stacked card layout */
-  .card8{
+  /* tall card2 spans two rows: its image grows to fill the extra height */
+  .card2{ grid-template-rows: auto 1fr auto auto auto; }
+  .card2 img{ height: 100%; }
+
+  /* card4 returns to the stacked card layout */
+  .card4{
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto auto auto 1fr auto;
     grid-template-areas:
