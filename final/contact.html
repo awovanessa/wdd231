@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Me | PortFolio Hub</title>
+<meta name="description" content="Contact Vanessa Awo about an internship, a collaboration, a freelance project or a question, or find her on GitHub, LinkedIn and X.">
+<meta name="author" content="Vanessa Awo">
+<meta property="og:title" content="Contact Vanessa Awo About Internships and Projects">
+<meta property="og:description" content="Send Vanessa Awo a note about an internship, a collaboration or a freelance project, or reach her on GitHub, LinkedIn or X.">
+<meta property="og:image" content="https://awovanessa.github.io/wdd231/final/images/og-image.webp">
+<meta property="og:url" content="https://awovanessa.github.io/wdd231/final/contact.html">
+<meta property="og:type" content="website">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code&amp;family=Inter:wght@400;600&amp;family=Poppins:wght@600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/main.css">
+<script type="module" src="scripts/main.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="images/favicon.svg" alt="" width="36" height="36" decoding="async">
+      PortFolio Hub
+    </a>
+    <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="container">
+    <h1>Contact Me</h1>
+    <p class="page-intro">I am open to internships, collaborations and freelance web projects. Tell me what you have in mind.</p>
+
+    <div class="contact-layout">
+      <section aria-labelledby="form-heading">
+        <h2 id="form-heading" class="section-title">Send a message</h2>
+        <p>All fields are required.</p>
+        <form class="contact-form" action="form-action.html" method="get">
+          <div class="field">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" autocomplete="name" minlength="2" maxlength="80" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" maxlength="120" required>
+          </div>
+          <div class="field">
+            <label for="reason">What are you reaching out about?</label>
+            <select id="reason" name="reason" required>
+              <option value="">Choose a topic</option>
+              <option>Internship</option>
+              <option>Collaboration</option>
+              <option>Freelance project</option>
+              <option>Question</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" minlength="20" maxlength="1000" required></textarea>
+          </div>
+          <button type="submit" class="button">Submit</button>
+        </form>
+      </section>
+
+      <aside class="info-panel" aria-labelledby="online-heading">
+        <h2 id="online-heading" class="section-title">Find me online</h2>
+        <p>This form is part of my WDD 231 course project: it shows your message back to you on the next page, but it does not send it anywhere. For a reply, please reach me on one of these profiles.</p>
+        <ul class="social-links">
+          <li><a class="button button-alt" href="https://github.com/awovanessa" target="_blank" rel="noopener" aria-label="GitHub profile, opens in a new tab">GitHub</a></li>
+          <li><a class="button button-alt" href="https://ng.linkedin.com/in/vanessa-awo-457442348" target="_blank" rel="noopener" aria-label="LinkedIn profile, opens in a new tab">LinkedIn</a></li>
+          <li><a class="button button-alt" href="https://x.com/aviwebstudios" target="_blank" rel="noopener" aria-label="X profile, opens in a new tab">X</a></li>
+        </ul>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="year">2026</span> Vanessa Awo &middot; PortFolio Hub</p>
+    <p>Last modified: <span id="last-modified"></span></p>
+    <ul class="footer-links">
+      <li><a href="attributions.html">Attributions</a></li>
+      <li><a class="video-link">Video demonstration</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

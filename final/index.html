@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vanessa Awo's Web Development Portfolio | PortFolio Hub</title>
+<meta name="description" content="PortFolio Hub shows the web development projects Vanessa Awo built as a student, the HTML, CSS and JavaScript behind them, and how to get in touch.">
+<meta name="author" content="Vanessa Awo">
+<meta property="og:title" content="PortFolio Hub: Vanessa Awo's Web Development Portfolio">
+<meta property="og:description" content="Student web development projects by Vanessa Awo, with the HTML, CSS and JavaScript techniques behind each one.">
+<meta property="og:image" content="https://awovanessa.github.io/wdd231/final/images/og-image.webp">
+<meta property="og:url" content="https://awovanessa.github.io/wdd231/final/index.html">
+<meta property="og:type" content="website">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code&amp;family=Inter:wght@400;600&amp;family=Poppins:wght@600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/main.css">
+<script type="module" src="scripts/main.js"></script>
+<script type="module" src="scripts/projects.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="images/favicon.svg" alt="" width="36" height="36" decoding="async">
+      PortFolio Hub
+    </a>
+    <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="container">
+
+    <section class="hero" aria-labelledby="page-title">
+      <div>
+        <p class="meta">Student web developer &middot; Abuja, Nigeria</p>
+        <h1 id="page-title">Vanessa Awo's Web Development Portfolio</h1>
+        <p class="hero-lead">Fifteen pages and features I built in my WDD 231 Frontend Web Development course, each with the HTML, CSS and JavaScript techniques behind it.</p>
+        <a class="button" href="projects.html">View all projects</a>
+      </div>
+      <pre class="code-card"><code>const vanessa = {
+  role: "Student web developer",
+  location: "Abuja, Nigeria",
+  studying: "Software Development, BYU-Pathway",
+  course: "WDD 231",
+  builds: ["HTML", "CSS", "JavaScript"]
+};</code></pre>
+    </section>
+
+    <section class="section" aria-labelledby="featured-heading">
+      <h2 id="featured-heading" class="section-title">Featured projects</h2>
+      <div id="featured-grid" class="card-grid featured-grid"></div>
+    </section>
+
+    <section class="section" aria-labelledby="build-heading">
+      <h2 id="build-heading" class="section-title">How I build</h2>
+      <p class="page-intro">Every project on this site is written by hand in plain HTML, CSS and JavaScript, with no frameworks or site builders.</p>
+      <div class="skills">
+        <article class="skill">
+          <h3>Semantic HTML</h3>
+          <p>Pages built from landmarks and headings, with labeled forms, native dialogs and ARIA where it helps.</p>
+          <ul class="tags" aria-label="HTML technologies">
+            <li class="tag">HTML forms</li>
+            <li class="tag">HTML dialog</li>
+            <li class="tag">ARIA</li>
+          </ul>
+        </article>
+        <article class="skill">
+          <h3>Responsive CSS</h3>
+          <p>Mobile-first layouts that change shape with the screen, from single columns to named grid areas.</p>
+          <ul class="tags" aria-label="CSS technologies">
+            <li class="tag">CSS Grid</li>
+            <li class="tag">Flexbox</li>
+            <li class="tag">Media queries</li>
+          </ul>
+        </article>
+        <article class="skill">
+          <h3>JavaScript modules</h3>
+          <p>ES modules that fetch JSON and APIs, build cards with template literals and remember choices.</p>
+          <ul class="tags" aria-label="JavaScript technologies">
+            <li class="tag">Fetch API</li>
+            <li class="tag">localStorage</li>
+            <li class="tag">URLSearchParams</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">Looking for an intern or a collaborator?</h2>
+      <p>Tell me about an internship, a collaboration or a freelance project.</p>
+      <a class="button" href="contact.html">Get in touch</a>
+    </section>
+
+  </div>
+
+  <dialog id="project-dialog" class="project-dialog" aria-labelledby="dialog-title">
+    <div class="dialog-inner">
+      <div class="dialog-header">
+        <h2 id="dialog-title">Project details</h2>
+        <button type="button" class="button button-alt dialog-close">Close</button>
+      </div>
+      <div class="dialog-body"></div>
+    </div>
+  </dialog>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="year">2026</span> Vanessa Awo &middot; PortFolio Hub</p>
+    <p>Last modified: <span id="last-modified"></span></p>
+    <ul class="footer-links">
+      <li><a href="attributions.html">Attributions</a></li>
+      <li><a class="video-link">Video demonstration</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>

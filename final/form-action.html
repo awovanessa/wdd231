@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Form Submission Summary | PortFolio Hub</title>
+<meta name="description" content="A summary of the details you entered in the PortFolio Hub contact form: your name, email, reason for reaching out and message.">
+<meta name="author" content="Vanessa Awo">
+<meta property="og:title" content="Contact Form Submission Summary | PortFolio Hub">
+<meta property="og:description" content="Review the name, email, topic and message you entered in the PortFolio Hub contact form.">
+<meta property="og:image" content="https://awovanessa.github.io/wdd231/final/images/og-image.webp">
+<meta property="og:url" content="https://awovanessa.github.io/wdd231/final/form-action.html">
+<meta property="og:type" content="website">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Code&amp;family=Inter:wght@400;600&amp;family=Poppins:wght@600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/main.css">
+<script type="module" src="scripts/main.js"></script>
+<script type="module" src="scripts/form-action.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <img src="images/favicon.svg" alt="" width="36" height="36" decoding="async">
+      PortFolio Hub
+    </a>
+    <button type="button" id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="primary-nav" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <nav id="primary-nav" class="primary-nav" aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+  <div class="container">
+    <h1>Form Submission Summary</h1>
+
+    <section id="submission" aria-labelledby="summary-heading" hidden>
+      <h2 id="summary-heading" class="section-title">Here is what you entered</h2>
+      <dl class="summary">
+        <dt>Full name</dt>
+        <dd id="result-name"></dd>
+        <dt>Email</dt>
+        <dd id="result-email"></dd>
+        <dt>Reason for reaching out</dt>
+        <dd id="result-reason"></dd>
+        <dt>Message</dt>
+        <dd id="result-message"></dd>
+      </dl>
+      <p class="page-intro">Thank you for writing. Because this form is a course demonstration, your message has not been sent. To reach me, use my GitHub, LinkedIn or X profile on the <a href="contact.html">contact page</a>.</p>
+    </section>
+
+    <section id="no-submission" aria-labelledby="empty-heading" hidden>
+      <h2 id="empty-heading" class="section-title">No message to show yet</h2>
+      <p class="page-intro">It looks like you opened this page without sending the contact form. Fill it in, and your answers will appear here.</p>
+      <a class="button" href="contact.html">Go to the contact form</a>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>&copy; <span id="year">2026</span> Vanessa Awo &middot; PortFolio Hub</p>
+    <p>Last modified: <span id="last-modified"></span></p>
+    <ul class="footer-links">
+      <li><a href="attributions.html">Attributions</a></li>
+      <li><a class="video-link">Video demonstration</a></li>
+    </ul>
+  </div>
+</footer>
+
+</body>
+</html>
