@@ -2,7 +2,7 @@
 // and the video link.
 
 // The one place the video demonstration URL is kept.
-const VIDEO_URL = "VIDEO_URL_HERE";
+const VIDEO_URL = "https://www.loom.com/share/f073b51d360d46e897c676678b9fcc44";
 
 function initNavigation() {
   const toggle = document.querySelector("#nav-toggle");
